@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Enatye</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      overflow: hidden;
+    }
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .circle img {
+      width: 120px;
+    }
+    h1 {
+      font-size: 2em;
+      color: #ff4da6;
+      margin-bottom: 40px;
+    }
+    .option {
+      background-color: #fff;
+      color: #0d0d0d;
+      padding: 12px 20px;
+      border-radius: 30px;
+      margin: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .option:hover {
+      transform: scale(1.05);
+    }
+    #message {
+      font-size: 1.2em;
+      margin-top: 30px;
+      color: #ffb6c1;
+      text-align: center;
+      max-width: 80%;
+    }
+    .emoji {
+      font-size: 2.5rem;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="meowing cat">
+  </div>
+  <h1>Hey Enatye</h1>  <div class="option" onclick="showMessage1()">Tap Me</div>
+  <div id="message"></div>  <div id="heart" class="emoji hidden" onclick="explodeHeart()">❤️</div>
+  <div id="iceCream" class="emoji hidden" onclick="showMarriage()">🍦</div>
+  <div id="lip" class="emoji hidden" onclick="showKiss()">💋</div>  <script>
+    function showMessage1() {
+      document.getElementById('message').innerText = "You are the reason for everything. I love you";
+      document.getElementById('heart').classList.remove('hidden');
+    }
+
+    function explodeHeart() {
+      let heart = document.getElementById('heart');
+      heart.innerText = "💥";
+      document.getElementById('message').innerText = "I love you";
+      setTimeout(() => {
+        document.getElementById('iceCream').classList.remove('hidden');
+      }, 1000);
+    }
+
+    function showMarriage() {
+      document.getElementById('message').innerText = "I will marry you";
+      document.getElementById('lip').classList.remove('hidden');
+    }
+
+    function showKiss() {
+      document.getElementById('message').innerText = "I love you, kiss me";
+    }
+  </script></body>
+</html>
